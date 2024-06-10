@@ -1,9 +1,17 @@
 {
     "java.project.sourcePaths": [
-        "calculadora-ir-investimentos/src/main/java"
+        "calculadora-ir-investimentos/src/main/java",
+        "calculadora-ir-investimentos/src/test/java"
     ],
     "java.project.outputPath": "bin",
     "java.project.referencedLibraries": [
         "lib/**/*.jar"
-    ]
+    ],
+    "java.test.config": {
+        "name": "myTestConfig",
+        "vmArgs": [
+            "-Xmx512M",
+        ],
+        "output": "bin-test"
+    }
 }

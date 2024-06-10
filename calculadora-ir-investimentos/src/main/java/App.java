@@ -10,8 +10,6 @@ public class App {
         Investimento rendaFixa = new Investimento(5000, 300, 6);
         Investimento fundoInvestimento = new Investimento(8000, 500, 24);
 
-        System.out.println(poupanca);
-
         CalculadoraImposto calculadora = new CalculadoraImposto(new ImpostoPoupancaStrategy());
         System.out.println("IR Poupança: " + calculadora.calcular(poupanca));
 

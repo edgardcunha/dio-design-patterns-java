@@ -9,34 +9,34 @@ Este projeto implementa uma calculadora de imposto de renda (IR) sobre investime
 Este exemplo demonstra o poder do Design Pattern Strategy para criar um sistema flexível e extensível no contexto financeiro. A fácil manutenção e adaptação a novas regras de negócio são algumas das vantagens chave dessa abordagem.
 
 ## Diagrama UML do Projeto
-```marmeid
+```mermaid
 classDiagram
 class CalculadoraImposto
 CalculadoraImposto : -ImpostoStrategy strategy
 CalculadoraImposto : +CalculadoraImposto(ImpostoStrategy)
-CalculadoraImposto : +setStrategy(ImpostoStrategy) : void
-CalculadoraImposto : +calcular(Investimento) : double
+CalculadoraImposto : +setStrategy(ImpostoStrategy) void
+CalculadoraImposto : +calcular(Investimento) double
 
 interface ImpostoStrategy
-CalculadoraImposto : +calcularImposto(Investimento) : double
+ImpostoStrategy : +calcularImposto(Investimento) double
 
 class ImpostoPoupancaStrategy
-CalculadoraImposto : +calcularImposto(Investimento) : double
+ImpostoPoupancaStrategy : +calcularImposto(Investimento) double
 
 class ImpostoRendaFixaStrategy
-CalculadoraImposto : +calcularImposto(Investimento) : double
+ImpostoRendaFixaStrategy : +calcularImposto(Investimento) double
 
 class ImpostoFundoInvestimentoStrategy
-CalculadoraImposto : +calcularImposto(Investimento) : double
+ImpostoFundoInvestimentoStrategy : +calcularImposto(Investimento) double
 
 class Investimento
-CalculadoraImposto : -double valorInvestido
-CalculadoraImposto : -double rendimento
-CalculadoraImposto : -int tempoInvestidoEmMeses
-CalculadoraImposto : +Investimento(double, double, int)
-CalculadoraImposto : +getValorInvestido() : double
-CalculadoraImposto : +getRendimento() : double
-CalculadoraImposto : +getTempoInvestidoEmMeses() : int
+Investimento : -double valorInvestido
+Investimento : -double rendimento
+Investimento : -int tempoInvestidoEmMeses
+Investimento : +Investimento(double, double, int)
+Investimento : +getValorInvestido() double
+Investimento : +getRendimento() double
+Investimento : +getTempoInvestidoEmMeses() int
 
 CalculadoraImposto --> "1" ImpostoStrategy : usa
 ImpostoStrategy <|.. ImpostoPoupancaStrategy
