@@ -6,7 +6,7 @@ Repositório com o código do desafio "Simulando Uma Conta Bancária Através Do
 
 Este projeto implementa uma calculadora de imposto de renda (IR) sobre investimentos em Java utilizando o "Strategy Design Pattern". O objetivo é permitir o cálculo do IR de diferentes tipos de investimentos, como poupança, renda fixa e fundos de investimento, de forma flexível e extensível.
 
-Este exemplo demonstra o poder do Design Pattern Strategy para criar um sistema flexível e extensível no contexto financeiro. A fácil manutenção e adaptação a novas regras de negócio são algumas das vantagens chave dessa abordagem.
+Este exemplo demonstra o poder do "Strategy Design Pattern" para criar um sistema flexível e extensível no contexto financeiro. A fácil manutenção e adaptação a novas regras de negócio são algumas das vantagens chave dessa abordagem.
 
 ## Diagrama UML do Projeto
 ```mermaid
